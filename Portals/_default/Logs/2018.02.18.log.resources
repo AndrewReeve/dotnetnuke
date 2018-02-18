@@ -1,0 +1,165 @@
+2018-02-18 22:28:16.837+13:00 [AndrewsDesktop][D:6][T:49][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [4] Error executing SQL: ;Exec dbo.AddScheduleHistory @0, @1, @2
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+2018-02-18 22:28:16.855+13:00 [AndrewsDesktop][D:6][T:49][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.) ---> System.ComponentModel.Win32Exception (0x80004005): The semaphore timeout period has expired
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddScheduleHistory(Int32 ScheduleID, DateTime StartDate, String Server)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.AddScheduleHistory(ScheduleHistoryItem scheduleHistoryItem)
+ClientConnectionId:41350cdc-ad39-4007-a51e-0c99ceb80aec
+Error Number:121,State:0,Class:20
+2018-02-18 22:29:30.886+13:00 [AndrewsDesktop][D:2][T:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:29:30.905+13:00 [AndrewsDesktop][D:2][T:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:29:31.294+13:00 [AndrewsDesktop][D:2][T:9][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:29:31.299+13:00 [AndrewsDesktop][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:29:31.757+13:00 [AndrewsDesktop][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2018-02-18 22:29:41.006+13:00 [AndrewsDesktop][D:2][T:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:29:41.013+13:00 [AndrewsDesktop][D:2][T:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:29:41.702+13:00 [AndrewsDesktop][D:2][T:9][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:29:41.707+13:00 [AndrewsDesktop][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:29:42.035+13:00 [AndrewsDesktop][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2018-02-18 22:30:17.741+13:00 [AndrewsDesktop][D:2][T:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:30:17.746+13:00 [AndrewsDesktop][D:2][T:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:30:18.770+13:00 [AndrewsDesktop][D:2][T:9][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:30:18.775+13:00 [AndrewsDesktop][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:30:19.114+13:00 [AndrewsDesktop][D:2][T:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2018-02-18 22:31:29.241+13:00 [AndrewsDesktop][D:2][T:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:31:29.246+13:00 [AndrewsDesktop][D:2][T:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=An unexpected error has occurred&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:31:29.991+13:00 [AndrewsDesktop][D:2][T:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:31:29.996+13:00 [AndrewsDesktop][D:2][T:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?error=terminate
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-02-18 22:31:30.516+13:00 [AndrewsDesktop][D:2][T:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.PageLoadException: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Entities.Portals.PortalSettingsController.ConfigureActiveTab(PortalSettings portalSettings)
+   at DotNetNuke.Framework.DefaultPage.InitializePage()
+   at DotNetNuke.Framework.DefaultPage.OnInit(EventArgs e)
+   at System.Web.UI.Control.InitRecursive(Control namingContainer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
